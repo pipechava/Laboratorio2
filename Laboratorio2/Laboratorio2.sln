@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Lab2DB", "Lab2DB\Lab2DB.sqlproj", "{2868D1D5-C4D5-41CB-AF50-0523DFFB09BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wcf", "Wcf\Wcf.csproj", "{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{B0087618-9877-44FB-8C40-3C33BE3BF9A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +21,14 @@ Global
 		{2868D1D5-C4D5-41CB-AF50-0523DFFB09BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2868D1D5-C4D5-41CB-AF50-0523DFFB09BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2868D1D5-C4D5-41CB-AF50-0523DFFB09BD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
