@@ -5,7 +5,6 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -21,35 +20,18 @@ namespace Wcf
         SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=Lab2DB;Integrated Security=True");
 
 
-        public List<Productos> GetProductos()
+        public List<Productos> GetProductos(Productos prod)
         {
 
-            Productos prod = new Productos();
             con.Open();
             SqlCommand cmd = new SqlCommand();
 
-            //cmd.CommandText = "SELECT top 10 Factura.idFactura, Factura.FechaFactura, Factura.PrecioTotal, Producto.nombreProducto " +
-            //    "FROM Factura " +
-            //    "INNER JOIN FacturaDetail ON Factura.idFactura = FacturaDetail.Factura_idFactura " +
-            //    "INNER JOIN Producto ON FacturaDetail.Producto_idProducto = Producto.idProducto ";
-
-            //cmd.CommandText = "WHERE FechaFactura >= '@fechaFacturaInicio' AND ";
-            //cmd.Parameters.AddWithValue("fechaFacturaInicio", prod.FechaFacturaInicio);
-
-            //cmd.CommandText = "FechaFactura <= '@fechaFacturaFin' AND ";
-            //cmd.Parameters.AddWithValue("fechaFacturaFin", prod.FechaFacturaFin);
-
-            //cmd.CommandText = "nombreProducto LIKE '@nombreProducto' ";
-            //cmd.Parameters.AddWithValue("nombreProducto", prod.NombreProducto);
+            cmd.CommandText = "SELECT top 10 Factura.idFactura, Factura.FechaFactura, Factura.PrecioTotal, Producto.nombreProducto "+ 
+            "FROM Factura INNER JOIN FacturaDetail ON Factura.idFactura = FacturaDetail.Factura_idFactura INNER JOIN Producto "+
+            "ON FacturaDetail.Producto_idProducto = Producto.idProducto "+
+            "WHERE FechaFactura >= '" +prod.FechaFacturaInicio+ "' AND FechaFactura <= '" +prod.FechaFacturaFin+ "' AND nombreProducto LIKE '%" +prod.NombreProducto+ "%'";
 
             cmd.Connection = con; // IMPORTANE |EEEEEEEEEE
-
-            //----------------------PRUEBAA====================
-
-            cmd.CommandText = "SELECT top 10 Factura.idFactura, Factura.FechaFactura, Factura.PrecioTotal, Producto.nombreProducto FROM Factura INNER JOIN FacturaDetail ON Factura.idFactura = FacturaDetail.Factura_idFactura INNER JOIN Producto ON FacturaDetail.Producto_idProducto = Producto.idProducto WHERE FechaFactura >= '1990-01-01'AND FechaFactura <= '2016-12-31' and nombreProducto LIKE '%mountain%'";
-
-            //--------------------------------------------======
-
 
             List<Productos> ProdL = new List<Productos>();
 

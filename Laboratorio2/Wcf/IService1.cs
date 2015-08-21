@@ -14,7 +14,7 @@ namespace Wcf
     {
 
         [OperationContract]
-        List<Productos> GetProductos();
+        List<Productos> GetProductos(Productos prod);
 
         [OperationContract]
         List<Productos> MostrarProductos();

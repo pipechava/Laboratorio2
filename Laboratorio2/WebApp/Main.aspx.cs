@@ -32,7 +32,7 @@ namespace WebApp
  
 
             Service1Client service1 = new Service1Client();
-            GridView1.DataSource = service1.GetProductos();
+            GridView1.DataSource = service1.GetProductos(prod);
             GridView1.DataBind();
             
 

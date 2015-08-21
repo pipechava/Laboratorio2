@@ -143,10 +143,10 @@ namespace WebApp.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetProductos", ReplyAction="http://tempuri.org/IService1/GetProductosResponse")]
-        WebApp.ServiceReference1.Productos[] GetProductos();
+        WebApp.ServiceReference1.Productos[] GetProductos(WebApp.ServiceReference1.Productos prod);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetProductos", ReplyAction="http://tempuri.org/IService1/GetProductosResponse")]
-        System.Threading.Tasks.Task<WebApp.ServiceReference1.Productos[]> GetProductosAsync();
+        System.Threading.Tasks.Task<WebApp.ServiceReference1.Productos[]> GetProductosAsync(WebApp.ServiceReference1.Productos prod);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/MostrarProductos", ReplyAction="http://tempuri.org/IService1/MostrarProductosResponse")]
         WebApp.ServiceReference1.Productos[] MostrarProductos();
@@ -182,12 +182,12 @@ namespace WebApp.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public WebApp.ServiceReference1.Productos[] GetProductos() {
-            return base.Channel.GetProductos();
+        public WebApp.ServiceReference1.Productos[] GetProductos(WebApp.ServiceReference1.Productos prod) {
+            return base.Channel.GetProductos(prod);
         }
         
-        public System.Threading.Tasks.Task<WebApp.ServiceReference1.Productos[]> GetProductosAsync() {
-            return base.Channel.GetProductosAsync();
+        public System.Threading.Tasks.Task<WebApp.ServiceReference1.Productos[]> GetProductosAsync(WebApp.ServiceReference1.Productos prod) {
+            return base.Channel.GetProductosAsync(prod);
         }
         
         public WebApp.ServiceReference1.Productos[] MostrarProductos() {
