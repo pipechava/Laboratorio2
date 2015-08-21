@@ -1,0 +1,7 @@
+C:\Users\Felipe\Documents\GitHub\Laboratorio2\Laboratorio2\Lab2DB\bin\Debug\Lab2DB.dacpac
+C:\Users\Felipe\Documents\GitHub\Laboratorio2\Laboratorio2\Lab2DB\obj\Debug\Model.xml
+C:\Users\Felipe\Documents\GitHub\Laboratorio2\Laboratorio2\Lab2DB\obj\Debug\refactor.xml
+C:\Users\Felipe\Documents\GitHub\Laboratorio2\Laboratorio2\Lab2DB\obj\Debug\postdeploy.sql
+C:\Users\Felipe\Documents\GitHub\Laboratorio2\Laboratorio2\Lab2DB\obj\Debug\predeploy.sql
+C:\Users\Felipe\Documents\GitHub\Laboratorio2\Laboratorio2\Lab2DB\obj\Debug\Lab2DB.dll
+C:\Users\Felipe\Documents\GitHub\Laboratorio2\Laboratorio2\Lab2DB\obj\Debug\Lab2DB.pdb

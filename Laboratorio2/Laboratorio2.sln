@@ -7,7 +7,10 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Lab2DB", "Lab2DB\Lab2DB.sql
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wcf", "Wcf\Wcf.csproj", "{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{B0087618-9877-44FB-8C40-3C33BE3BF9A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{5BA07C81-D44A-41CC-A5FE-CB9B945D2EED}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27} = {A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +28,10 @@ Global
 		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A86F62CF-1A47-4FB0-A477-F8D80A6ADD27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0087618-9877-44FB-8C40-3C33BE3BF9A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA07C81-D44A-41CC-A5FE-CB9B945D2EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA07C81-D44A-41CC-A5FE-CB9B945D2EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA07C81-D44A-41CC-A5FE-CB9B945D2EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA07C81-D44A-41CC-A5FE-CB9B945D2EED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
