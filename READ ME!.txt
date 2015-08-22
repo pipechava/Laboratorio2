@@ -1,0 +1,5 @@
+** El documento final en donde se describe toda la documentacion del laboratorio es el que esta en esta carpeta con el nombre:"Laboratorio2TSDocumentoFinal.docx.docx"
+
+** La solucion del proyecto y archivos de BD esta en la carpeta "Laboratorio2"
+
+** Toda informacion adicional como scripts, screen shots y demas se encuentra en la carpeta "Laboratorio2 INFO"
