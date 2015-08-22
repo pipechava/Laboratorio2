@@ -1,0 +1,4 @@
+"SELECT top 10 Factura.idFactura, Factura.FechaFactura, Factura.PrecioTotal, Producto.nombreProducto "+ 
+            "FROM Factura INNER JOIN FacturaDetail ON Factura.idFactura = FacturaDetail.Factura_idFactura INNER JOIN Producto "+
+            "ON FacturaDetail.Producto_idProducto = Producto.idProducto "+
+            "WHERE FechaFactura >= '" +prod.FechaFacturaInicio+ "' AND FechaFactura <= '" +prod.FechaFacturaFin+ "' AND nombreProducto LIKE '%" +prod.NombreProducto+ "%'";
