@@ -19,7 +19,7 @@ namespace Wcf.Model
     public class MetodosQuerry
     {
 
-         static SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=Lab2DB;Integrated Security=True");
+        static SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=Lab2DB;Integrated Security=True");
 
         public SqlCommand conexion()
         {
