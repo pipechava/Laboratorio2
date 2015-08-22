@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
+using Wcf.Controller;
 
 namespace Wcf
 {
@@ -12,7 +13,7 @@ namespace Wcf
     [ServiceContract]
     public interface IService1
     {
-
+   
         [OperationContract]
         List<Productos> GetProductos(Productos prod);
 
@@ -22,52 +23,5 @@ namespace Wcf
     }
 
     // Use a data contract as illustrated in the sample below to add composite types to service operations.
-    [DataContract]
-    public class Productos
-    {
-        int idFactura = 0;
-        string fechaFactura = string.Empty;
-        string fechaFacturaInicio = string.Empty;
-        string fechaFacturaFin = string.Empty;
-        double precioTotal = 0.00;
-        string nombreProducto = string.Empty;
-
-        [DataMember]
-        public int IdFactura
-        {
-            get { return idFactura; }
-            set { idFactura = value; }
-        }
-        [DataMember]
-        public string FechaFactura
-        {
-            get { return fechaFactura; }
-            set { fechaFactura = value; }
-        }
-        [DataMember]
-        public string FechaFacturaInicio
-        {
-            get { return fechaFacturaInicio; }
-            set { fechaFacturaInicio = value; }
-        }
-        [DataMember]
-        public string FechaFacturaFin
-        {
-            get { return fechaFacturaFin; }
-            set { fechaFacturaFin = value; }
-        }
-        [DataMember]
-        public double PrecioTotal
-        {
-            get { return precioTotal; }
-            set { precioTotal = value; }
-        }
-        [DataMember]
-        public string NombreProducto
-        {
-            get { return nombreProducto; }
-            set { nombreProducto = value; }
-        }
-    }
 
 }

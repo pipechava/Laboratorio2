@@ -15,7 +15,7 @@ namespace WebApp.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Productos", Namespace="http://schemas.datacontract.org/2004/07/Wcf")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Productos", Namespace="http://schemas.datacontract.org/2004/07/Wcf.Controller")]
     [System.SerializableAttribute()]
     public partial class Productos : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         

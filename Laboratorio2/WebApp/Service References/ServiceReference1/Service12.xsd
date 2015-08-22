@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:4097/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wcf" />
+  <xs:import schemaLocation="http://localhost:4097/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Wcf.Controller" />
   <xs:element name="GetProductos">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Wcf" minOccurs="0" name="prod" nillable="true" type="q1:Productos" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Wcf.Controller" minOccurs="0" name="prod" nillable="true" type="q1:Productos" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetProductosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wcf" minOccurs="0" name="GetProductosResult" nillable="true" type="q2:ArrayOfProductos" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Wcf.Controller" minOccurs="0" name="GetProductosResult" nillable="true" type="q2:ArrayOfProductos" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -23,7 +23,7 @@
   <xs:element name="MostrarProductosResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wcf" minOccurs="0" name="MostrarProductosResult" nillable="true" type="q3:ArrayOfProductos" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Wcf.Controller" minOccurs="0" name="MostrarProductosResult" nillable="true" type="q3:ArrayOfProductos" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

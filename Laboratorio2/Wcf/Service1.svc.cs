@@ -8,6 +8,8 @@ using System.Text;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using Wcf.Controller;
+using Wcf.Model;
 
 namespace Wcf
 {
@@ -16,71 +18,27 @@ namespace Wcf
     public class Service1 : IService1
     {
 
-
-        SqlConnection con = new SqlConnection("Data Source=localhost;Initial Catalog=Lab2DB;Integrated Security=True");
-
-
         public List<Productos> GetProductos(Productos prod)
         {
 
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-
-            cmd.CommandText = "SELECT top 10 Factura.idFactura, Factura.FechaFactura, Factura.PrecioTotal, Producto.nombreProducto "+ 
-            "FROM Factura INNER JOIN FacturaDetail ON Factura.idFactura = FacturaDetail.Factura_idFactura INNER JOIN Producto "+
-            "ON FacturaDetail.Producto_idProducto = Producto.idProducto "+
-            "WHERE FechaFactura >= '" +prod.FechaFacturaInicio+ "' AND FechaFactura <= '" +prod.FechaFacturaFin+ "' AND nombreProducto LIKE '%" +prod.NombreProducto+ "%'";
-
-            cmd.Connection = con; // IMPORTANE |EEEEEEEEEE
+            MetodosQuerry MQ = new MetodosQuerry();
 
             List<Productos> ProdL = new List<Productos>();
 
-            SqlDataReader reader = cmd.ExecuteReader();
-            while(reader.Read())
-            {
-                prod.IdFactura = Convert.ToInt32(reader[0]);
-                prod.FechaFactura = reader[1].ToString();
-                prod.PrecioTotal = Convert.ToDouble(reader[2]);
-                prod.NombreProducto = reader[3].ToString(); ;
-
-                ProdL.Add(prod);
-            }
-
-
-
-            con.Close();
-
-            return ProdL;
+            return MQ.filtraProductos(prod, ProdL);
 
         }
 
         public List<Productos> MostrarProductos() 
         {
-            con.Open();
-            SqlCommand cmd = new SqlCommand();
-            List<Productos> ProdL2 = new List<Productos>();
 
-            cmd.CommandText = "SELECT top 10 Factura.idFactura, Factura.FechaFactura, Factura.PrecioTotal, Producto.nombreProducto FROM Factura INNER JOIN FacturaDetail ON Factura.idFactura = FacturaDetail.Factura_idFactura INNER JOIN Producto ON FacturaDetail.Producto_idProducto = Producto.idProducto";
+            MetodosQuerry MQ = new MetodosQuerry();
 
-            cmd.Connection = con; // IMPORTANE |EEEEEEEEEE
+            List<Productos> ProdL = new List<Productos>();
 
-            SqlDataReader reader = cmd.ExecuteReader();
-            while(reader.Read())
-            {
-
-                Productos prod2 = new Productos();
-                prod2.IdFactura = Convert.ToInt32(reader[0]);
-                prod2.FechaFactura = reader[1].ToString();
-                prod2.PrecioTotal = Convert.ToDouble(reader[2]);
-                prod2.NombreProducto = reader[3].ToString();
-
-                ProdL2.Add(prod2);
+            return MQ.cargaProductos(ProdL);
             
-            }
-
-            con.Close();
-
-            return ProdL2;
+            
         }
 
     }
